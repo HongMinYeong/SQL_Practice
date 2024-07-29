@@ -67,7 +67,13 @@ desc emp01;
 -- insert 
 insert into emp01 (ename) values ('연아');
 select * from emp01;
-select * from emp01 limit 2;
+select * from emp01 limit 10; -- 검색된 결과의 row 수 제약  
+
+-- empno내림차순 검색
+SELECT * FROM emp01 ORDER BY empno DESC;
+-- ? 내림차순 후 3명의 직원만 검색 
+-- FROM -> SELECT -> ORDER BY -> LIMIT 순으로 실행  
+SELECT * FROM emp01 ORDER BY empno DESC LIMIT 3;
 
 
 -- 2. 수정 : 자동 증가분 시작값을 100으로 설정해 보기 
@@ -78,5 +84,3 @@ insert into emp01 (ename) values ('연아');
 select * from emp01; 
 
 
-
-  
